@@ -12,3 +12,4 @@ These are my dotfiles for my Hyprland setup.
 ## Todo:
 - Install script
 - Add other pkgs confs
+- Proper swaync config (or something else to replace it)
