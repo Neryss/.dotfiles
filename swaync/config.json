@@ -22,9 +22,10 @@
     "hide-on-action": true,
     "script-fail-notify": true,
     "widgets": [
+        "title",
+        "dnd",
       "buttons-grid",
       "volume",
-      "backlight",
       "mpris"
     ],
     "widget-config": {
@@ -42,17 +43,10 @@
       },
       "mpris": {
         "image-size": 100,
-        "image-radius": 0,
-        "blacklist": [
-          "kew",
-          "firefox"
-        ]
+        "image-radius": 0
       },
       "volume": {
         "label": "󰕾"
-      },
-      "backlight": {
-        "label": "󰃟"
       },
       "buttons-grid": {
         "actions": [
@@ -66,15 +60,7 @@
           },
           {
             "label": "󰌾",
-            "command": "swaylock-corrupter"
-          },
-          {
-            "label": "󰍃",
-            "command": "swaymsg exit"
-          },
-          {
-            "label": "󰆴",
-            "command": "swaync-client -C"
+            "command": "hyprlock"
           },
           {
             "label": "󰕾",
