@@ -103,22 +103,22 @@
         "format-alt": "{:%H:%M}"
     },
     "cpu": {
-        "format": "<span foreground=\"#3fbea8\">CPU</span>:{usage}%",
+        "format": "<span foreground=\"#3fbea8\"> </span>:{usage}%",
         "tooltip": true
     },
     "memory": {
-        "format": "<span foreground=\"#3fbea8\">RAM</span>:{}%"
+        "format": "<span foreground=\"#3fbea8\">󰍛 </span>{}%"
     },
     "temperature": {
         "thermal-zone": 2,
         "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
+        "critical-threshold": 100,
         "format-critical": "{temperatureC}°C",
-        "format": "{temperatureC}°C",
+        "format": "<span foreground=\"#3fbea8\"></span> {temperatureC}",
         "format-icons": ["", "", ""]
     },
     "custom/battery": {
-        "format": "󰂂:{}",
+        "format": "<span foreground=\"#3fbea8\">  </span> {}",
         "format-alt": "[]",
         "tooltip": "true",
         // "tooltip-format": "Battery:{value}",
@@ -129,27 +129,27 @@
     "network": {
         "format": "{ifname}",
         "format-wifi": "Wi-Fi:{essid} |",
-        "format-ethernet": "<span foreground=\"#3fbea8\">ETH</span>:{ifname}",
+        "format-ethernet": "<span foreground=\"#3fbea8\">󰈀  </span>{ifname}",
         "format-disconnected": "",
         "tooltip-format-wifi": "{signalStrength}%",
         "max-length": 20
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "<span foreground=\"#3fbea8\">VOL</span>:{volume}%",
+        "format": "<span foreground=\"#3fbea8\">{icon}</span> {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": ":{volume}%",
-        "format-source-muted": "",
+        "format-muted": "<span foreground=\"#3fbea8\">   </span>{format_source}",
+        // "format-source": ":{volume}%",
+        "format-source-muted": "<span foreground=\"#3fbea8\"> </span>",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
-            "headset": "🎜",
+            "headset": ["  ", "  ", "  "],
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["  ", "  ", "  "]
         },
         "on-click": "pavucontrol"
     },

@@ -22,8 +22,8 @@
     "hide-on-action": true,
     "script-fail-notify": true,
     "widgets": [
-        "title",
-        "dnd",
+      "title",
+      "dnd",
       "buttons-grid",
       "volume",
       "mpris"
@@ -52,11 +52,7 @@
         "actions": [
           {
             "label": "󰐥",
-            "command": "systemctl poweroff"
-          },
-          {
-            "label": "󰜉",
-            "command": "systemctl reboot"
+            "command": "wlogout"
           },
           {
             "label": "󰌾",
