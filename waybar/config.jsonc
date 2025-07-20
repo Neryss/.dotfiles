@@ -14,7 +14,6 @@
     // Choose the order of the modules
     "modules-left": [
         // "hyprland/workspaces",
-        // "custom/media"
         // "hyprland/submap",
         "hyprland/window"
     ],
@@ -25,6 +24,8 @@
         "custom/battery",
         "pulseaudio",
         "network",
+        // "bluetooth",
+        // "network#speed",
         "cpu",
         "temperature",
         "memory",
@@ -103,7 +104,7 @@
         "format-alt": "{:%H:%M}"
     },
     "cpu": {
-        "format": "<span foreground=\"#3fbea8\"> </span>:{usage}%",
+        "format": "<span foreground=\"#3fbea8\"> </span> {usage}%",
         "tooltip": true
     },
     "memory": {
@@ -127,13 +128,29 @@
         "interval": 5
     },
     "network": {
-        "format": "{ifname}",
+        "interval": 1,
+        "format": "{ifname} {bandwidthDownBytes}",
         "format-wifi": "Wi-Fi:{essid} |",
         "format-ethernet": "<span foreground=\"#3fbea8\">󰈀  </span>{ifname}",
         "format-disconnected": "",
         "tooltip-format-wifi": "{signalStrength}%",
+        "tooltip-format-ethernet": "{bandwidthDownBytes} | {bandwidthUpBytes}",
         "max-length": 20
     },
+    // "network#speed": {
+    //     "interval": 1,
+    //     "format": "{ifname}",
+    //     "format-wifi": "{icon} {bandwidthDownBytes}  {bandwidthUpBytes} ",
+    //     "format-ethernet": "{icon} {bandwidthDownBytes}  {bandwidthUpBytes} ",
+    //     "format-disconnected": "󰌙",
+    //     "tooltip-format": "{ipaddr}",
+    //     "format-linked": "󰈁 {ifname} (No IP)",
+    //     "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+    //     "tooltip-format-ethernet": "{ifname} 󰌘",
+    //     "tooltip-format-disconnected": "󰌙 Disconnected",
+    //     "max-length": 30,
+    //     "format-icons": ["󰤯 ","󰤟 ","󰤢 ","󰤥 ","󰤨 "]
+    // },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "<span foreground=\"#3fbea8\">{icon}</span> {volume}%",
@@ -158,8 +175,8 @@
         "return-type": "json",
         "max-length": 40,
         "format-icons": {
-            "spotify": "",
-            "default": "🎜"
+            "spotify": " ",
+            "default": "🎜 "
         },
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2>  /dev/null" // Script in resources folder

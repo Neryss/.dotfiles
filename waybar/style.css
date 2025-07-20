@@ -29,6 +29,10 @@ tooltip {
   border: 2px solid @border-color;
 }
 
+tooltip label {
+  padding: 5px 5px 5px 5px;
+}
+
 #clock,
 #tray,
 #cpu,
