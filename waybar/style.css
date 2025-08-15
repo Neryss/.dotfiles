@@ -12,8 +12,9 @@
   border-radius: 0;
   min-height: 0;
   /* font-family: "Hurmit Nerd Font Mono"; */
-  font-family: "iosevka nerd font";
-  font-weight: 500;
+  /* font-family: "iosevka nerd font"; */
+  font-family: "Symbols Nerd Font", "JetBrains Mono";
+  font-weight: 600;
   font-size: 14px;
   padding: 0;
 }
@@ -108,4 +109,8 @@ tooltip label {
   /* background-color: #ddc7a1; */
   border: 2px solid @border-color;
   /* color: #c14a4a; */
+}
+
+#pulseaudio {
+  min-width: 150px;
 }

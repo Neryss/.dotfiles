@@ -69,7 +69,8 @@
         "tooltip-format": "{app}: {title}"
     },
     "hyprland/window": {
-        "format": "{}"
+        "format": "{}",
+        "max-length": 40,
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
@@ -153,22 +154,51 @@
     // },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "<span foreground=\"#3fbea8\">{icon}</span> {volume}%",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "<span foreground=\"#3fbea8\">   </span>{format_source}",
-        // "format-source": ":{volume}%",
-        "format-source-muted": "<span foreground=\"#3fbea8\"> </span>",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": ["  ", "  ", "  "],
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["  ", "  ", "  "]
-        },
-        "on-click": "pavucontrol"
+        // "format": "<span foreground=\"#3fbea8\">{icon}</span> {volume}%",
+        // "format-bluetooth": "{volume}% {icon} {format_source}",
+        // "format-bluetooth-muted": " {icon} {format_source}",
+        // "format-muted": "<span foreground=\"#3fbea8\">   </span>{format_source}",
+        // // "format-source": ":{volume}%",
+        // "format-source-muted": "<span foreground=\"#3fbea8\"> </span>",
+          "format": "<span foreground=\"#3fbea8\">{icon}</span> {volume}%",
+          "format-muted": "󰝟 [░░░MUTE░░░] {volume}%",
+          "format-bluetooth": "{icon} {volume}%",
+          "on-click": "pavucontrol",
+          "format-icons": [
+            "󰕾 [░░░░░░░░░░]",
+            "󰕾 [█░░░░░░░░░]",
+            "󰕾 [██░░░░░░░░]",
+            "󰕾 [███░░░░░░░]",
+            "󰕾 [████░░░░░░]",
+            "󰕾 [█████░░░░░]",
+            "󰕾 [██████░░░░]",
+            "󰕾 [███████░░░]",
+            "󰕾 [████████░░]",
+            "󰕾 [█████████░]",
+            "󰕾 [██████████]"
+          ]
+        // "format-icons": {
+        //     "headphone": "",
+        //     "hands-free": "",
+        //     "headset": ["  ", "  ", "  "],
+        //     "phone": "",
+        //     "portable": "",
+        //     "car": "",
+        //     "default": ["  ", "  ", "  "],
+        //     "format-icons": [
+        //       "󰕿 [░░░░░░░░░░]", 
+        //       "󰕿 [█░░░░░░░░░]", 
+        //       "󰕿 [██░░░░░░░░]", 
+        //       "󰖀 [███░░░░░░░]", 
+        //       "󰖀 [████░░░░░░]", 
+        //       "󰖀 [█████░░░░░]", 
+        //       "󰕾 [██████░░░░]", 
+        //       "󰕾 [███████░░░]", 
+        //       "󰕾 [████████░░]", 
+        //       "󱄡 [█████████░]", 
+        //       "󱄡 [██████████]"  
+        //     ]
+        // },
     },
     "custom/media": {
         "format": "{icon} {}",
