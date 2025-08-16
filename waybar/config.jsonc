@@ -120,13 +120,26 @@
         "format-icons": ["", "", ""]
     },
     "custom/battery": {
-        "format": "<span foreground=\"#3fbea8\">  </span> {}",
+        "exec": "/usr/local/bin/check_battery",
+        "format": "<span foreground=\"#3fbea8\"> {icon}</span> {text}%",
         "format-alt": "[]",
         "tooltip": "true",
         // "tooltip-format": "Battery:{value}",
-        "exec": "/usr/local/bin/check_battery",
         "return-type": "json",
-        "interval": 5
+        "interval": 5,
+        "format-icons": [
+          "[░░░░░░░░░░]",
+          "[█░░░░░░░░░]",
+          "[██░░░░░░░░]",
+          "[███░░░░░░░]",
+          "[████░░░░░░]",
+          "[█████░░░░░]",
+          "[██████░░░░]",
+          "[███████░░░]",
+          "[████████░░]",
+          "[█████████░]",
+          "[██████████]"
+        ]
     },
     "network": {
         "interval": 1,
