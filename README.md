@@ -2,6 +2,10 @@
 
 These are my dotfiles for my Hyprland setup.
 
+## Preview
+
+![preview](./small_preview.png)
+
 ## Dependencies
 
 - Hyprland
