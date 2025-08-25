@@ -17,6 +17,7 @@
   font-weight: 600;
   font-size: 14px;
   padding: 0;
+  color: whitesmoke;
 }
 
 window#waybar {
@@ -42,6 +43,7 @@ tooltip label {
 #window,
 #network,
 #temperature,
+#battery,
 #pulseaudio {
   margin: 6px 6px 6px 0px;
   padding: 2px 8px;
@@ -90,6 +92,7 @@ tooltip label {
 #memory,
 #network,
 #temperature,
+#battery,
 #pulseaudio {
   /* background-color: #ddc7a1; */
   border: 2px solid @border-color;

@@ -21,14 +21,15 @@
     ],
     "modules-right": [
         // "mpd",
-        "custom/battery",
+        // "custom/battery",
         "pulseaudio",
-        "network",
+        "battery",
+        // "network",
         // "bluetooth",
         // "network#speed",
-        "cpu",
+        // "cpu",
         "temperature",
-        "memory",
+        //"memory",
         "clock",
         "tray"
     ],
@@ -224,5 +225,21 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2>  /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
+    },
+    "battery": {
+      "format": "<span foreground=\"#3fbea8\"> {icon}</span> {capacity}%",
+      "format-icons": [
+          "[░░░░░░░░░░]",
+          "[█░░░░░░░░░]",
+          "[██░░░░░░░░]",
+          "[███░░░░░░░]",
+          "[████░░░░░░]",
+          "[█████░░░░░]",
+          "[██████░░░░]",
+          "[███████░░░]",
+          "[████████░░]",
+          "[█████████░]",
+          "[██████████]"
+      ]
+    },
 }

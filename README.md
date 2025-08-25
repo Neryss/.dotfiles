@@ -22,6 +22,10 @@ These are my dotfiles for my Hyprland setup.
 - grim + slurp
 - wl-copy
 
+```bash
+yay -Sy waybar wofi waypaper
+```
+
 ## Hyprland config notes
 
 In [hyprland.conf](./hypr/hyprland.conf), `$terminal=kitty`, `$fileManager=thunar` and `$menu=wofi` can be swapped to your liking.
