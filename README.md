@@ -23,7 +23,7 @@ These are my dotfiles for my Hyprland setup.
 - wl-copy
 
 ```bash
-yay -Sy waybar wofi waypaper
+yay -Sy waybar wofi waypaper hyprpaper dunst hyprpicker hyprlock-git
 ```
 
 ## Hyprland config notes

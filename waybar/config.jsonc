@@ -172,7 +172,7 @@
         // "format-bluetooth": "{volume}% {icon} {format_source}",
         // "format-bluetooth-muted": " {icon} {format_source}",
         // "format-muted": "<span foreground=\"#3fbea8\">   </span>{format_source}",
-        // // "format-source": ":{volume}%",
+        // "format-source": ":{volume}%",
         // "format-source-muted": "<span foreground=\"#3fbea8\"> </span>",
           "format": "<span foreground=\"#3fbea8\">{icon}</span> {volume}%",
           "format-muted": "󰝟 [░░░MUTE░░░] {volume}%",
@@ -228,6 +228,7 @@
     },
     "battery": {
       "format": "<span foreground=\"#3fbea8\"> {icon}</span> {capacity}%",
+      "format-alt": "<span foreground=\"#3fbea8\"> </span>{capacity}%",
       "format-icons": [
           "[░░░░░░░░░░]",
           "[█░░░░░░░░░]",
