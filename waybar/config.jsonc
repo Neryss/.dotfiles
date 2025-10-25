@@ -26,9 +26,9 @@
         "network",
         // "bluetooth",
         // "network#speed",
-        "cpu",
+        // "cpu",
         "temperature",
-        "memory",
+        // "memory",
         "clock",
         "tray"
     ],
