@@ -1,0 +1,18 @@
+#entry:selected {
+	background-color: #7c4dfd;
+}
+
+#window {
+	all:unset;
+	font-size: 18px;
+	color: white;
+	background: rgba(56, 56, 56, 0.8);
+	border: 2px solid #7c4dfd;
+	border-radius: 5px;
+}
+
+#input {
+	background: rgba(56, 56, 56, 0.8);
+	border: 2px solid #7c4dfd;
+	color: white;
+}
