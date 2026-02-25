@@ -8,19 +8,29 @@ These are my dotfiles for my Hyprland setup.
 
 ## Dependencies
 
-- Hyprland
+### Core/System
+
+- Hyprland (and its suite)
+
+### UI/Style
+
+- waybar (status bar)
+- Dunst (notification panels)
+- [awww](https://codeberg.org/LGFae/awww) (wallpaper backend)
+- Hyprpaper (wallpaper selection UI)
+
+### Tools
+
 - mpd (media player daemon)
 - ncmpcpp (media library TUI)
-- swaync (notification panel)
-- waybar (status bar)
-- hyprpaper (wallpaper manager)
 - kitty (terminal)
 - thunar (file manager)
+- Yazi (TUI file explorer)
 - wofi (run menu)
 - fcitx (for JP or other alphabet writing)
 - hyprpicker (color picker tool)
-- grim + slurp
-- wl-copy
+- grim + slurp (for screenshots, check [screenshot](./screenshot)
+- wl-copy (copy-paste)
 
 ## Hyprland config notes
 
@@ -29,5 +39,3 @@ In [hyprland.conf](./hypr/hyprland.conf), `$terminal=kitty`, `$fileManager=thuna
 ## Todo:
 - Install script
 - Add other pkgs confs
-- Proper swaync config (or something else to replace it)
-- do something about swaync it looks ugly
