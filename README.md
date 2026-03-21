@@ -2,6 +2,10 @@
 
 These are my dotfiles for my Hyprland setup.
 
+### Notes
+
+This is the version used for my portable monoscreen, might be a bit different from main multi-monitor setup
+
 ## Preview
 
 ![preview](./small_preview.png)
@@ -13,7 +17,7 @@ These are my dotfiles for my Hyprland setup.
 - ncmpcpp (media library TUI)
 - swaync (notification panel)
 - waybar (status bar)
-- hyprpaper (wallpaper manager)
+- awww-git (wallpaper backend)
 - kitty (terminal)
 - thunar (file manager)
 - wofi (run menu)
