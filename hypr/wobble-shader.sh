@@ -10,11 +10,9 @@ if [[ "$current_shader" == *"simple-wobble"* ]]; then
 
   notify-send 'Simple wobble' 'Disabled'
 else
+  hyprctl eval 'hl.config({ debug = { damage_tracking = 0 }})'
+
   hyprshade on simple-wobble
-
-  hypr_overrides="keyword debug:damage_tracking 0;"
-
-  hyprctl --batch "$hypr_overrides"
 
   notify-send 'Simple wobble' 'Activated'
 fi
