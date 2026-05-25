@@ -377,6 +377,17 @@ local suppressMaximizeRule = hl.window_rule({
 })
 suppressMaximizeRule:set_enabled(false)
 
+-- Floating rename and copy/paste progress
+hl.window_rule({
+	name	= "thunar-dialogs-float",
+	match	= {
+		-- title	= "^(Rename|File Operation Progress)*",
+		class	= "thunar",
+		title	= "^(Rename.*|File Operation Progress)$"
+	},
+	float = true
+})
+
 hl.window_rule({
     -- Fix some dragging issues with XWayland
     name  = "fix-xwayland-drags",
