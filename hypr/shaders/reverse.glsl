@@ -4,7 +4,6 @@ precision mediump float;
 
 in vec2 v_texcoord;
 uniform sampler2D tex;
-uniform float time;
 
 uniform vec2 resolution;
 out vec4 fragColor;
