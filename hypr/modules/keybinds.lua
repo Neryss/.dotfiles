@@ -64,3 +64,7 @@ hl.bind(mainMod .. " + SHIFT + c", hl.dsp.exec_cmd("hyprpicker"))
 hl.bind(mainMod .. " + n", hl.dsp.exec_cmd("dunstctl history-pop"))
 hl.bind(mainMod .. " + b", hl.dsp.exec_cmd("dunstctl close-all"))
 
+-- bind = SUPER, Z, exec, brightnessctl s 10%-
+-- bind = SUPER, X, exec, brightnessctl s +10%
+hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("brightnessctl s 10%-"))
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("brightnessctl s +10%"))

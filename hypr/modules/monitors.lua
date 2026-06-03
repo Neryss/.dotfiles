@@ -2,21 +2,8 @@
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
-    output		= "DP-1",
-    mode		= "1920x1080@165",
-    position	= "0x0",
-    scale		= "1",
-})
-hl.monitor({
-	output		= "DP-3",
-	mode		= "1920x1080",
-	position	= "-1080x-840",
-	scale		= "1",
-	transform	= 1
-})
-hl.monitor({
-	output		= "HDMI-A-1",
-	mode		= "1920x1080",
-	position	= "1920x0",
-	scale		= "1"
+	output = "eDP1",
+	mode = "1920x1080@165",
+	position = "0x0",
+	scale = "1",
 })
