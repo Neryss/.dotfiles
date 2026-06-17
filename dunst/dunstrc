@@ -17,7 +17,7 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = keyboard
+    # follow = keyboard
 
     ### Geometry ###
 
@@ -495,3 +495,8 @@
 #    set_stack_tag = "volume"
 #
 # vim: ft=cfg
+#
+# [test]
+# 	summary = "Screenshot"
+# 	urgency = low
+# 	script = "~/.dotfiles/dunst/test.sh"

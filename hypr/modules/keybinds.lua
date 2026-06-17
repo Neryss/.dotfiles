@@ -58,7 +58,7 @@ hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 -- Utils binds
-hl.bind(mainMod .. " + SHIFT + s", hl.dsp.exec_cmd("~/.local/bin/screenshot"))
+hl.bind(mainMod .. " + SHIFT + s", hl.dsp.exec_cmd("~/.config/hypr/screenshot"))
 hl.bind(mainMod .. " + SHIFT + c", hl.dsp.exec_cmd("hyprpicker"))
 
 hl.bind(mainMod .. " + n", hl.dsp.exec_cmd("dunstctl history-pop"))

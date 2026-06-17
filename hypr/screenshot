@@ -1,0 +1,23 @@
+#!/bin/bash
+# This script aims to work on hyprland through dunstify notifications
+
+file_name=~/Pictures/$(date +'screenshot_%Y-%m-%d_%H-%m-%s').png
+
+IMG=$file_name && grim -g "$(slurp)" $IMG && wl-copy < $IMG
+
+
+default_action ()
+{
+	imv $file_name
+}
+
+ACTION=$(dunstify --action="default,open" "Screenshot saved!" "$file_name")
+
+case "$ACTION" in
+	"default")
+		default_action
+		;;
+	"2")
+		;;
+esac
+
