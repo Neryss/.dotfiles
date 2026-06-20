@@ -39,6 +39,7 @@ tooltip label {
 #cpu,
 #memory,
 #custom-battery,
+#custom-notif,
 #window,
 #network,
 #temperature,
@@ -80,10 +81,14 @@ tooltip label {
   border: 2px solid @border-color;
 }
 
-#custom-battery {
+#custom-battery, #custom-notif {
   /* background-color: #a9b665; */
   border: 2px solid @border-color;
   color: whitesmoke;
+}
+
+#custom-notif {
+	margin-left: 5px;
 }
 
 #cpu,

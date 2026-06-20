@@ -17,6 +17,9 @@
     // "hyprland/submap",
     // "hyprland/window"
   // ],
+  "modules-left": [
+	"custom/notif"
+  ],
   "modules-center": [],
   "modules-right": [
     // "mpd",
@@ -125,8 +128,15 @@
       ""
     ]
   },
+  "custom/notif": {
+    "exec": "~/.dotfiles/waybar/scripts/check-notif.sh",
+	"return-type": "text",
+	"interval": 1,
+	"on-click": "dunstctl set-paused toggle",
+	"tooltip": false
+  },
   "custom/battery": {
-    "exec": "/usr/local/bin/check_battery",
+    "exec": "~/.dotfiles/waybar/scripts/check_battery.sh",
     "format": "<span foreground=\"#3fbea8\"> {icon}</span> {text}%",
     "format-alt": "<span foreground=\"#3fbea8\"> </span>{text}%",
     "tooltip": "true",
