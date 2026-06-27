@@ -3,7 +3,7 @@
 status=$(dunstctl is-paused)
 
 if [[ "$status" == "true" ]]; then
-	echo "n: off"
+	echo ""
 else
-	echo "n: on "
+	echo ""
 fi

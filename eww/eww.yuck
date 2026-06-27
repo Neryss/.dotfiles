@@ -2,14 +2,10 @@
   :stacking "fg"
   :windowtype "normal"
   :wm-ignore true
-  :geometry (geometry :width "100%" :height "100%")
+  :geometry (geometry :width "50%" :height "49%")
   :monitor 0
   (powermenu_layout))
 
 (defwidget powermenu_layout []
   (label :text "Hello, World!"))
 
-(button :onclick "notify-send Left"
-  :onrightclick "notify-send Right"
-  "Click me !"
-  )
