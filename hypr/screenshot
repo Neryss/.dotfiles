@@ -1,15 +1,41 @@
 #!/bin/bash
-# This script aims to work on hyprland through dunstify notifications
+# This screenshot tool has 3 modes:
+# `screen_monitor`: takes a screenshot of the active monitor
+# `screen_whole_setup`: whole setup containing every monitor
+# `screen_slurp`: uses slurp to screenshot selected zone
 
-file_name=~/Pictures/$(date +'screenshot_%Y-%m-%d_%H-%m-%s').png
+file_name=~/Pictures/Screenshots/$(date +'screenshot_%Y-%m-%d_%H-%m-%s').png
 
-IMG=$file_name && grim -g "$(slurp)" $IMG && wl-copy < $IMG
+function	screen_monitor() {
+	monitor=$(hyprctl monitors | awk '/Monitor/{mon=$2} /focused: yes/{print mon}')
+	IMG=$file_name && grim -o $monitor $IMG && wl-copy < $IMG
+}
 
+function	screen_whole_setup() {
+	IMG=$file_name && grim $IMG && wl-copy < $IMG
+}
 
-default_action ()
+function	screen_slurp() {
+	IMG=$file_name && grim -g "$(slurp)" $IMG && wl-copy < $IMG
+}
+
+function main() {
+	echo $1
+	if [[ "$1" == "slurp" ]]; then
+		screen_slurp;
+	elif [[ "$1" == "monitor" ]]; then
+		screen_monitor;
+	elif [[ "$1" == "whole" ]]; then
+		screen_whole_setup;
+	fi
+}
+
+function	default_action ()
 {
 	imv $file_name
 }
+
+main $@
 
 ACTION=$(dunstify --action="default,open" "Screenshot saved!" "$file_name")
 
@@ -20,4 +46,5 @@ case "$ACTION" in
 	"2")
 		;;
 esac
+
 
